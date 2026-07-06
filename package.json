@@ -1,6 +1,6 @@
 {
   "name": "com.anklebreaker-studio.utils.ui-basics",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "displayName": "AnkleBreaker Studio - Utils UI Basics",
   "description": "Reusable uGUI button components with state tracking, toggle behavior, and generic button-group management. Part of the AnkleBreaker Utils split.",
   "unity": "2022.3",
@@ -16,6 +16,7 @@
     "url": "https://www.anklebreaker-studio.com"
   },
   "dependencies": {
-    "com.anklebreaker-studio.utils.inspector": "https://github.com/AnkleBreaker-Studio/AnkleBreaker-Utils-Inspector.git#Release"
+    "com.anklebreaker-studio.utils.inspector": "https://github.com/AnkleBreaker-Studio/AnkleBreaker-Utils-Inspector.git#Release",
+    "com.unity.ugui": "1.0.0"
   }
 }

@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.4.2] - 2026-07-06
+
+### Fixed
+- Add missing `com.unity.ugui` dependency to `package.json` — the Runtime and Editor code uses `UnityEngine.UI` and `UnityEngine.EventSystems`, but uGUI was not declared as a dependency. On projects with a minimal manifest (no uGUI resolved), this caused compilation errors. Declaring the dependency lets UPM install uGUI automatically.
+
 ## [0.4.1] - 2026-04-04
 
 ### Fixed
