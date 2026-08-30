@@ -83,7 +83,9 @@ namespace AnkleBreaker.Utils.UIBasics.Editor
         public override void OnInspectorGUI()
         {
             // --- Unity's standard Button inspector inside a foldout ---
-            if (BeginFoldout(ButtonFoldoutTitle, ButtonFoldoutStyle, null))
+            // Open by default: On Click () is the field users look for first, and a
+            // collapsed group makes the component read as empty on a fresh import.
+            if (BeginFoldout(ButtonFoldoutTitle, ButtonFoldoutStyle, null, defaultOpen: true))
             {
                 base.OnInspectorGUI();
             }
@@ -230,10 +232,10 @@ namespace AnkleBreaker.Utils.UIBasics.Editor
 
         #region Foldout Helpers
 
-        private bool BeginFoldout(string title, FoldoutGroupStyle style, Color? color)
+        private bool BeginFoldout(string title, FoldoutGroupStyle style, Color? color, bool defaultOpen = false)
         {
             string key = target.GetType().FullName + "_foldout_" + title;
-            if (!FoldoutStates.ContainsKey(key)) FoldoutStates[key] = false;
+            if (!FoldoutStates.ContainsKey(key)) FoldoutStates[key] = defaultOpen;
 
             switch (style)
             {

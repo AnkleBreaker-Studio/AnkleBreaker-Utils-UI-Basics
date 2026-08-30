@@ -35,6 +35,8 @@ Enhanced `UnityEngine.UI.Button` that exposes selection-state transitions via C#
 
 On Reset, auto-configures a transparent `Image` for raycasting and disables navigation/transition.
 
+In the Inspector and the Project window it carries Unity's stock Button icon, so the inherited component is recognisable at a glance.
+
 ### IUISwitch
 
 Interface for UI elements with an on/off toggle state.
@@ -81,7 +83,7 @@ Handles click listener lifecycle automatically. Safe to call `Init()` multiple t
 
 ### ABButtonEditor
 
-Custom inspector for `ABButton` and subclasses. Preserves the standard Button inspector while adding support for `[FoldoutGroup]`, `[ShowInInspector]`, `[Button]`, `[SectionHeader]`, `[ToggleButton]`, and other Utils Inspector attributes. Collapses helper components (Image, CanvasRenderer) for a cleaner view.
+Custom inspector for `ABButton` and subclasses. Preserves the standard Button inspector while adding support for `[FoldoutGroup]`, `[ShowInInspector]`, `[Button]`, `[SectionHeader]`, `[ToggleButton]`, and other Utils Inspector attributes. Collapses helper components (Image, CanvasRenderer) for a cleaner view. The `Unity Button` group (Interactable, Transition, Navigation, `On Click ()`) is expanded by default.
 
 ## Requirements
 

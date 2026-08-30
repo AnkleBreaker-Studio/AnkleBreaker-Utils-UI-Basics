@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.3] - 2026-08-30
+
+### Fixed
+- `ABButtonEditor`: the `Unity Button` group wrapped the whole standard Button inspector, including the `On Click ()` list, in a foldout that was seeded collapsed. A freshly added `ABButton` therefore read as an empty component and users could not find where to wire their click callback. That group now opens by default; every other foldout group keeps its collapsed default.
+
+### Changed
+- `ABButton` now shows Unity's stock Button icon in the Inspector header and the Project window, so the inherited component is recognisable at a glance. The icon is a reference to Unity's built-in editor resource; no image asset is shipped with the package.
+
 ## [0.4.2] - 2026-07-06
 
 ### Fixed
